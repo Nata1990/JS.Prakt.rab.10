@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
    <head>
+   <meta charset="utf-8">
 	 <script src="jquery-3.4.1.min.js">
 	 </script>
+	</head>
+	<body>	
+     <p align="center">HIDE ME</p>
+    </body>
 	 <script>
-	     $(document).ready(function() {
-		     $("button").dblclick(function() {
-			     $("p").toggle();
-				 });
-			 }); 
+      var elem = $("p[align=center]");
+      var hidden = false;
+	  elem.dblclick(function() {
+      $(this).fadeTo(100, hidden ? 1 : 0);
+      hidden = !hidden;
+})
 	 </script>		 
-   </head>
-   <body>	
-     <button>Нажми два раза</button>
-	 <p align ="center">Если Вы дважды щелкните по кнопке, - текст исчезнет!</p>
-	 <p align ="center">Если Вы дважды щелкните по кнопке, - текст появится!</p>	 
-   </body>
 </html>
